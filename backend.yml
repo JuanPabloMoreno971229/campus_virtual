@@ -1,0 +1,12 @@
+Resources:
+  MyBackendBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: my-backend-bucket
+
+  MyBackendDatabase:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      Engine: mysql
+      ...
+      # Especifica las propiedades adicionales de la base de datos según tus necesidades
