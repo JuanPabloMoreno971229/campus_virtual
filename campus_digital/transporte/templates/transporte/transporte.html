@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load static %}
+	<title>Ver datos del API</title>
+</head>
+<body>
+	<form>
+		<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre">
+		<button type="button" onclick="buscarDatos()">Buscar</button>
+	</form>
+	<div id="resultados"></div>
+	<script src="{% static 'main.js' %}"></script>
+</body>
+</html>
+
