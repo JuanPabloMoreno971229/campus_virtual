@@ -413,7 +413,7 @@
 																			<span class="menu-bullet">
 																				<span class="bullet bullet-dot"></span>
 																			</span>
-																			<span class="menu-title">Blog Post</span>
+																			<span class="menu-title">Blog list</span>
 																		</a>
 																	</div>
 																</div>
@@ -3503,7 +3503,7 @@
 							<!--begin::Page title-->
 							<div class="page-title d-flex flex-column me-3">
 								<!--begin::Title-->
-								<h1 class="d-flex text-white fw-bolder my-1 fs-3">Blog Post</h1>
+								<h1 class="d-flex text-white fw-bolder my-1 fs-3">{% block title %}{% endblock %}</h1>
 								<!--end::Title-->
 								<!--begin::Breadcrumb-->
 								<ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
@@ -3650,7 +3650,7 @@
 					</div>
 					<!--end::Toolbar-->
 					<!--begin::Container-->
-		{% block content %}{% endblock %}
+						{% block content %}{% endblock %}
 					<!--begin::Footer-->
 					<div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
 						<!--begin::Container-->
@@ -5573,7 +5573,7 @@
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<span class="symbol-label bg-light-success text-success fw-bold">L</span>
+											<span class="symbol-label bg-light-success text-success fw-bold"></span>
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
