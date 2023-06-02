@@ -1,0 +1,266 @@
+{% extends 'core/base.html' %}{% block content %} {% load static %}
+    {% for linea in lineas %}
+        <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
+            <!--begin::Post-->
+            <div class="content flex-row-fluid" id="kt_content">
+                <!--begin::Post card-->
+                <div class="card">
+                    <!--begin::Body-->
+                    <div class="card-body p-lg-20 pb-lg-0">
+                        <!--begin::Layout-->
+                        <div class="d-flex flex-column flex-xl-row">
+                            <!--begin::Content-->
+                            <div class="flex-lg-row-fluid me-xl-15">
+                                <!--begin::Post content-->
+                                <div class="mb-17">
+                                    <!--begin::Wrapper-->
+                                    <div class="mb-8">
+                                        <!--begin::Info-->
+                                        <div class="d-flex flex-wrap mb-6">
+                                            <!--begin::Item-->
+                                            <div class="me-9 my-1">
+                                                <!--begin::Icon-->
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                                                <span class="svg-icon svg-icon-primary svg-icon-2 me-1">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
+                                                        <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="black" />
+                                                        <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="black" />
+                                                        <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="black" />
+                                                    </svg>
+                                                </span>
+                                                <!--end::Svg Icon-->
+                                                <!--end::Icon-->
+                                                <!--begin::Label-->
+                                                <span class="fw-bolder text-gray-400">06 April 2021</span>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="me-9 my-1">
+                                                <!--begin::Icon-->
+                                                <!--SVG file not found: icons/duotune/finance/fin006.svgFolder.svg-->
+                                                <!--end::Icon-->
+                                                <!--begin::Label-->
+                                                <span class="fw-bolder text-gray-400">Announcements</span>
+                                                <!--begin::Label-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="my-1">
+                                                <!--begin::Icon-->
+                                                <!--begin::Svg Icon | path: icons/duotune/communication/com003.svg-->
+                                                <span class="svg-icon svg-icon-primary svg-icon-2 me-1">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path opacity="0.3" d="M2 4V16C2 16.6 2.4 17 3 17H13L16.6 20.6C17.1 21.1 18 20.8 18 20V17H21C21.6 17 22 16.6 22 16V4C22 3.4 21.6 3 21 3H3C2.4 3 2 3.4 2 4Z" fill="black" />
+                                                        <path d="M18 9H6C5.4 9 5 8.6 5 8C5 7.4 5.4 7 6 7H18C18.6 7 19 7.4 19 8C19 8.6 18.6 9 18 9ZM16 12C16 11.4 15.6 11 15 11H6C5.4 11 5 11.4 5 12C5 12.6 5.4 13 6 13H15C15.6 13 16 12.6 16 12Z" fill="black" />
+                                                    </svg>
+                                                </span>
+                                                <!--end::Svg Icon-->
+                                                <!--end::Icon-->
+                                                <!--begin::Label-->
+                                                <span class="fw-bolder text-gray-400">24 Comments</span>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Item-->
+                                        </div>
+                                        <!--end::Info-->
+                                        <!--begin::Title-->
+                                        <a href="#" class="text-dark text-hover-primary fs-2 fw-bolder">{{linea.title}}
+                                        <span class="fw-bolder text-muted fs-5 ps-1">5 mins read</span></a>
+                                        <!--end::Title-->
+                                        <!--begin::Container-->
+                                        <div class="overlay mt-8">
+                                            <!--begin::Image-->
+                                            <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-350px" style="background-image:url('{{ linea.image.url }}')"></div>
+                                            <!--end::Image-->
+                                            <!--begin::Links-->
+                                            <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                <a href="../../demo2/dist/pages/company/about.html" class="btn btn-primary">About Us</a>
+                                                <a href="../../demo2/dist/pages/careers/apply.html" class="btn btn-light-primary ms-3">Join Us</a>
+                                            </div>
+                                            <!--end::Links-->
+                                        </div>
+                                        <!--end::Container-->
+                                    </div>
+                                    <!--end::Wrapper-->
+                                    <!--begin::Description-->
+                                    <div class="fs-5 fw-bold text-gray-600">
+                                        <!--begin::Text-->
+                                        <p class="mb-8">{{linea.content |linebreaks |ljust:"50"}}</p>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Description-->
+                                    <!--begin::Block-->
+                                    <div class="d-flex align-items-center border-dashed card-rounded p-5 p-lg-10 mb-14">
+                                        <!--begin::Section-->
+                                        <div class="text-center flex-shrink-0 me-7 me-lg-13">
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-70px symbol-circle mb-2">
+                                                <img src="{% static 'core/assets/media/avatars/calendario.png' %}" class="" alt="" />
+                                            </div>
+                                            <!--end::Avatar-->
+                                        </div>
+                                        <!--end::Section-->
+                                        <!--begin::Text-->
+                                        <div class="mb-0 fs-6">
+                                            <div class="text-muted fw-bold lh-lg mb-2">{{linea.question1 |linebreaks}}</div>
+                                        </div>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Block-->
+                                     <!--begin::Block-->
+                                    <div class="d-flex align-items-center border-dashed card-rounded p-5 p-lg-10 mb-14">
+                                        <!--begin::Section-->
+                                        <div class="text-center flex-shrink-0 me-7 me-lg-13">
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-70px symbol-circle mb-2">
+                                                <img src="{% static 'core/assets/media/avatars/usuarios.png' %}" class="" alt="" />
+                                            </div>
+                                            <!--end::Avatar-->
+                                        </div>
+                                        <!--end::Section-->
+                                        <!--begin::Text-->
+                                        <div class="mb-0 fs-6">
+                                            <div class="text-muted fw-bold lh-lg mb-2">{{linea.question2 |linebreaks}}</div>
+                                        </div>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Block-->
+                                     <!--begin::Block-->
+                                    <div class="d-flex align-items-center border-dashed card-rounded p-5 p-lg-10 mb-14">
+                                        <!--begin::Section-->
+                                        <div class="text-center flex-shrink-0 me-7 me-lg-13">
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-70px symbol-circle mb-2">
+                                                <img src="{% static 'core/assets/media/avatars/pregunta.png' %}" class="" alt="" />
+                                            </div>
+                                            <!--end::Avatar-->
+                                        </div>
+                                        <!--end::Section-->
+                                        <!--begin::Text-->
+                                        <div class="mb-0 fs-6">
+                                            <div class="text-muted fw-bold lh-lg mb-2">{{linea.question3 |linebreaks}}</div>
+                                        </div>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Block-->
+                                     <!--begin::Block-->
+                                    <div class="d-flex align-items-center border-dashed card-rounded p-5 p-lg-10 mb-14">
+                                        <!--begin::Section-->
+                                        <div class="text-center flex-shrink-0 me-7 me-lg-13">
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-70px symbol-circle mb-2">
+                                                <img src="{% static 'core/assets/media/avatars/equipo.png' %}" class="" alt="" />
+                                            </div>
+                                            <!--end::Avatar-->
+                                            <!--begin::Info-->
+                                            {% comment %} <div class="mb-0">
+                                                <a href="../../demo2/dist/pages/profile/overview.html" class="text-gray-700 fw-bolder text-hover-primary">Jane Johnson</a>
+                                                <span class="text-gray-400 fs-7 fw-bold d-block mt-1">Co-founder</span>
+                                            </div> {% endcomment %}
+                                            <!--end::Info-->
+                                        </div>
+                                        <!--end::Section-->
+                                        <!--begin::Text-->
+                                        <div class="mb-0 fs-6">
+                                            <div class="text-muted fw-bold lh-lg mb-2">{{linea.question4}}</div>
+                                        </div>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Block-->
+                                    <!--begin::Icons-->
+                                    <div class="d-flex flex-center">
+                                        <!--begin::Icon-->
+                                        <a href="#" class="mx-4">
+                                            <img src="assets/media/svg/brand-logos/facebook-4.svg" class="h-20px my-2" alt="" />
+                                        </a>
+                                        <!--end::Icon-->
+                                        <!--begin::Icon-->
+                                        <a href="#" class="mx-4">
+                                            <img src="assets/media/svg/brand-logos/instagram-2-1.svg" class="h-20px my-2" alt="" />
+                                        </a>
+                                        <!--end::Icon-->
+                                        <!--begin::Icon-->
+                                        <a href="#" class="mx-4">
+                                            <img src="assets/media/svg/brand-logos/github.svg" class="h-20px my-2" alt="" />
+                                        </a>
+                                        <!--end::Icon-->
+                                        <!--begin::Icon-->
+                                        <a href="#" class="mx-4">
+                                            <img src="assets/media/svg/brand-logos/behance.svg" class="h-20px my-2" alt="" />
+                                        </a>
+                                        <!--end::Icon-->
+                                        <!--begin::Icon-->
+                                        <a href="#" class="mx-4">
+                                            <img src="assets/media/svg/brand-logos/pinterest-p.svg" class="h-20px my-2" alt="" />
+                                        </a>
+                                        <!--end::Icon-->
+                                        <!--begin::Icon-->
+                                        <a href="#" class="mx-4">
+                                            <img src="assets/media/svg/brand-logos/twitter.svg" class="h-20px my-2" alt="" />
+                                        </a>
+                                        <!--end::Icon-->
+                                        <!--begin::Icon-->
+                                        <a href="#" class="mx-4">
+                                            <img src="assets/media/svg/brand-logos/dribbble-icon-1.svg" class="h-20px my-2" alt="" />
+                                        </a>
+                                        <!--end::Icon-->
+                                    </div>
+                                    <!--end::Icons-->
+                                </div>
+                                <!--end::Post content-->
+                            </div>
+                            <!--end::Content-->
+                            <!--begin::Sidebar-->
+                            <div class="flex-column flex-lg-row-auto w-100 w-xl-300px mb-10">
+                                <!--begin::Search blog-->
+                                <div class="mb-16">
+                                    <h4 class="text-black mb-7">Buscar</h4>
+                                    <!--begin::Input group-->
+                                    <div class="position-relative">
+                                        <!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+                                        <span class="svg-icon svg-icon-3 svg-icon-gray-500 position-absolute top-50 translate-middle ms-6">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="black" />
+                                                <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="black" />
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                        <input type="text" class="form-control form-control-solid ps-10" name="search" value="" placeholder="Buscar" />
+                                    </div>
+                                    <!--end::Input group-->
+                                </div>
+                                <!--end::Search blog-->
+                                <!--begin::Catigories-->
+                                <div class="mb-16">
+                                    <h4 class="text-black mb-7">Enlaces</h4>
+                                    <!--begin::Item-->
+                                    <div class="d-flex flex-stack fw-bold fs-5 text-muted mb-4">
+                                        <!--begin::Text-->
+                                        <a href="{{linea.link_date}}" class="text-muted text-hover-primary pe-2">Pide tu cita</a>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Item-->
+                                    <!--begin::Item-->
+                                    <div class="d-flex flex-stack fw-bold fs-5 text-muted mb-4">
+                                        <!--begin::Text-->
+                                        <a href="{{linea.link_FQ}}" class="text-muted text-hover-primary pe-2">Preguntas frecuentes</a>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Item-->
+                                </div>
+                                <!--end::Catigories-->
+                            </div>
+                            <!--end::Sidebar-->
+                        </div>
+                        <!--end::Layout-->
+                    </div>
+                    <!--end::Body-->
+                </div>
+                <!--end::Post card-->
+            </div>
+            <!--end::Post-->
+        </div>
+    {% endfor %}
+{% endblock %}
